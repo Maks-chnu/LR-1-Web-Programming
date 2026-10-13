@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="Author" content="Іванійчук Максим Іванович">
+  <meta name="Description" content="Новини аптеки ФармаЛайф">
+  <meta name="Keywords" content="новини, аптека, ФармаЛайф">
+  <title>Новини аптеки «ФармаЛайф»</title>
+
+  <style media="screen" lang="uk">
+    body { font-family: Arial, sans-serif; }
+    .news { background-color: #f0fff0; padding: 10px; margin-bottom: 10px; }
+    .info { color: gray; }
+    .old { color: red; }
+    .new { color: green; }
+    .side { border: 2px solid green; padding: 10px; margin: 20px; }
+    .latin { color: darkblue; }
+  </style>
+</head>
+<body>
+
+  <header style="text-align: center; background-color: #c8e6c9; padding: 10px;" title="Шапка сайту">
+    <h1>Новини аптеки «ФармаЛайф»</h1>
+    <p>
+      <a href="index.html">Про автора</a> |
+      <a href="company.html">Про аптеку</a> |
+      <a href="news.html">Новини</a>
+    </p>
+  </header>
+
+  <p>Натисніть на частину логотипу, щоб перейти на потрібну сторінку:</p>
+
+  <img src="images/logo.svg" alt="Карта сайту" border="1" width="300" class="logo" hspace="10" name="logo" usemap="#sitemap">
+
+  <map name="sitemap" href="index.html" tabindex="0" style="cursor: pointer;"
+       onfocus="this.style.outline='2px solid green'" onblur="this.style.outline='none'">
+    <area shape="rect" coords="0,0,100,100" href="index.html" alt="Про автора"
+          tabindex="1" accesskey="1" target="_self" class="map-link" onblur="console.log('Вийшли з посилання: Про автора')">
+    <area shape="rect" coords="100,0,200,100" href="company.html" alt="Про аптеку"
+          tabindex="2" accesskey="2" target="_self" class="map-link" onblur="console.log('Вийшли з посилання: Про аптеку')">
+    <area shape="rect" coords="200,0,300,100" href="news.html" alt="Новини"
+          tabindex="3" accesskey="3" target="_self" class="map-link" onblur="console.log('Вийшли з посилання: Новини')">
+  </map>
+
+  <section class="news-list" style="margin: 20px;">
+    <h2>Останні новини</h2>
+
+    <div class="news" id="news1">
+      <h3>Відкриття нової аптеки</h3>
+      <p class="info"><time datetime="2026-10-01">1 жовтня 2026</time></p>
+      <p>
+        Ми відкрили нову аптеку площею 120 м<sup class="up" style="font-size: 10px;">2</sup>.
+        Адреса аптеки змінилася:
+        <del class="old" lang="uk" datetime="2026-09-20">вул. Шкільна, 5</del>
+        <ins id="new-address" class="new" lang="uk">вул. Головна, 100</ins>.
+      </p>
+    </div>
+
+    <div class="news" id="news2">
+      <h3>Знижки на знеболювальні</h3>
+      <p class="info"><time datetime="2026-10-05">5 жовтня 2026</time></p>
+      <p>
+        На Парацетамол діє знижка <span id="sale" style="color: red; font-weight: bold;">-20%</span>.
+        Хімічна формула парацетамолу:
+        C<sub style="font-size: 10px;" id="c8">8</sub>H<sub style="font-size: 10px;" id="h9">9</sub>NO<sub style="font-size: 10px;" id="o2">2</sub>.
+      </p>
+    </div>
+
+    <div class="news" id="news3">
+      <h3>Нові вітаміни</h3>
+      <p class="info"><time datetime="2026-10-10">10 жовтня 2026</time></p>
+      <p>
+        У продажу з'явилась
+        <ruby id="vitamin-c" class="latin">Аскорбінова кислота <rp>(</rp><rt>Acidum ascorbinicum</rt><rp>)</rp></ruby>
+        від нового виробника.
+      </p>
+      <p>
+        Лікарі нагадують про проблему антибіотико<wbr id="w1">резистентності:
+        не приймайте антибіотики без рецепта!
+      </p>
+      <p>
+        Наша назва англійською, написана справа наліво:
+        <bdo lang="en" dir="rtl">PharmaLife</bdo>.
+      </p>
+    </div>
+  </section>
+
+  <aside id="sidebar" class="side">
+    <h3>Корисно знати</h3>
+    <p>Телефон аптеки: (0372) 00-00-00</p>
+    <p>Працюємо щодня з 08:00 до 21:00.</p>
+  </aside>
+
+  <footer>
+    <hr>
+    <p style="text-align: center;">
+      <small>&copy; 2026 Аптека «ФармаЛайф». Автор сторінки: Іванійчук Максим.</small>
+    </p>
+  </footer>
+
+</body>
+</html>
